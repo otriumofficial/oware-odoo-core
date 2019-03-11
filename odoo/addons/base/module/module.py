@@ -188,6 +188,7 @@ class Module(models.Model):
                     'doctitle_xform': False,
                     'output_encoding': 'unicode',
                     'xml_declaration': False,
+                    'file_insertion_enabled': False,
                 }
                 output = publish_string(source=module.description or '', settings_overrides=overrides, writer=MyWriter())
                 module.description_html = tools.html_sanitize(output)
@@ -462,7 +463,8 @@ class Module(models.Model):
         """
         modules_to_remove = self.mapped('name')
         self.env['ir.model.data']._module_data_uninstall(modules_to_remove)
-        self.write({'state': 'uninstalled', 'latest_version': False})
+        # we deactivate prefetching to not try to read a column that has been deleted
+        self.with_context(prefetch_fields=False).write({'state': 'uninstalled', 'latest_version': False})
         return True
 
     @api.multi
@@ -700,11 +702,10 @@ class Module(models.Model):
                     mod.write(updated_values)
             else:
                 mod_path = modules.get_module_path(mod_name)
-                if not mod_path:
+                if not mod_path or not terp:
                     continue
-                if not terp or not terp.get('installable', True):
-                    continue
-                mod = self.create(dict(name=mod_name, state='uninstalled', **values))
+                state = "uninstalled" if terp.get('installable', True) else "uninstallable"
+                mod = self.create(dict(name=mod_name, state=state, **values))
                 res[1] += 1
 
             mod._update_dependencies(terp.get('depends', []))

@@ -3,16 +3,20 @@
 # * pos_restaurant
 # 
 # Translators:
-# Martin Trigaux, 2017
 # Michal Veselý <michal@veselyberanek.net>, 2018
-# trendspotter, 2018
+# xlu <xlu@seznam.cz>, 2018
+# Martin Trigaux, 2018
+# Chris <krystof.reklamy13@gmail.com>, 2018
+# Jaroslav Helemik Nemec <nemec@helemik.cz>, 2018
+# trendspotter <j.podhorecky@volny.cz>, 2019
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.saas~18\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-20 09:52+0000\n"
-"PO-Revision-Date: 2017-09-20 09:52+0000\n"
-"Last-Translator: trendspotter, 2018\n"
+"POT-Creation-Date: 2019-01-03 15:06+0000\n"
+"PO-Revision-Date: 2017-09-20 10:21+0000\n"
+"Last-Translator: trendspotter <j.podhorecky@volny.cz>, 2019\n"
 "Language-Team: Czech (https://www.transifex.com/odoo/teams/41243/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,21 +25,26 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #. module: pos_restaurant
-#: model:ir.ui.view,arch_db:pos_restaurant.view_restaurant_floor_kanban
-msgid "<strong>Floor Name: </strong>"
+#: model:ir.ui.view,arch_db:pos_restaurant.pos_config_view_form_inherit_restaurant
+msgid "<span class=\"fa fa-lg fa-cutlery\" title=\"For bars and restaurants\"/>"
 msgstr ""
 
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.view_restaurant_floor_kanban
+msgid "<strong>Floor Name: </strong>"
+msgstr "<strong>Název podlaží:</strong>"
+
+#. module: pos_restaurant
+#: model:ir.ui.view,arch_db:pos_restaurant.view_restaurant_floor_kanban
 msgid "<strong>Point of Sale: </strong>"
-msgstr ""
+msgstr "<strong>Prodejní místo: </strong>"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,help:pos_restaurant.field_restaurant_floor_background_image
 msgid ""
 "A background image used to display a floor layout in the point of sale "
 "interface"
-msgstr ""
+msgstr "Obrázek pozadí slouží k zobrazení půdorysu restaurace "
 
 #. module: pos_restaurant
 #: model:ir.actions.act_window,help:pos_restaurant.action_restaurant_floor_form
@@ -43,11 +52,13 @@ msgid ""
 "A restaurant floor represents the place where customers are served, this is where you can\n"
 "                define and position the tables."
 msgstr ""
+"Půdorys restaurace představuje místo, kde jsou zákazníci obsluhováni, to je "
+"místo, kde můžete navrhnout a umístit stoly."
 
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.pos_config_view_form_inherit_restaurant
 msgid "Accept customer tips or convert their change to a tip"
-msgstr ""
+msgstr "Přijmout spropitné zákazníků nebo převést jejich drobné na spropitné"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_table_active
@@ -59,7 +70,7 @@ msgstr "Aktivní"
 #: code:addons/pos_restaurant/static/src/js/notes.js:54
 #, python-format
 msgid "Add Note"
-msgstr ""
+msgstr "Přidat poznámku"
 
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.pos_config_view_form_inherit_restaurant
@@ -94,7 +105,7 @@ msgstr ""
 #. module: pos_restaurant
 #: model:ir.model.fields,help:pos_restaurant.field_restaurant_floor_name
 msgid "An internal identification of the restaurant floor"
-msgstr ""
+msgstr "Interní identifikace podlaží restaurace"
 
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.view_restaurant_table_form
@@ -106,7 +117,7 @@ msgstr ""
 #: code:addons/pos_restaurant/static/src/js/floors.js:562
 #, python-format
 msgid "Are you sure ?"
-msgstr ""
+msgstr "Jste si jist ?"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -119,19 +130,19 @@ msgstr "Zpět"
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_floor_background_color
 msgid "Background Color"
-msgstr ""
+msgstr "Barva pozadí"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_floor_background_image
 msgid "Background Image"
-msgstr ""
+msgstr "Obrázek pozadí"
 
 #. module: pos_restaurant
 #. openerp-web
 #: code:addons/pos_restaurant/static/src/xml/printbill.xml:31
 #, python-format
 msgid "Bill"
-msgstr ""
+msgstr "Účet"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -139,7 +150,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:pos_restaurant.field_pos_config_iface_printbill
 #, python-format
 msgid "Bill Printing"
-msgstr ""
+msgstr "Tisk Účtu"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -147,7 +158,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:pos_restaurant.field_pos_config_iface_splitbill
 #, python-format
 msgid "Bill Splitting"
-msgstr ""
+msgstr "Rozdělit Účet"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -178,7 +189,7 @@ msgstr ""
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_table_color
 msgid "Color"
-msgstr ""
+msgstr "Barva"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_floor_create_uid
@@ -199,7 +210,7 @@ msgstr "Vytvořeno"
 #: code:addons/pos_restaurant/static/src/xml/printbill.xml:91
 #, python-format
 msgid "Discount:"
-msgstr ""
+msgstr "Sleva:"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -271,12 +282,12 @@ msgstr ""
 #: code:addons/pos_restaurant/static/src/xml/floors.xml:21
 #, python-format
 msgid "Guests:"
-msgstr ""
+msgstr "Hostů"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_table_height
 msgid "Height"
-msgstr ""
+msgstr "Výška"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_table_position_h
@@ -296,6 +307,8 @@ msgid ""
 "If false, the table is deactivated and will not be available in the point of"
 " sale"
 msgstr ""
+"Pokud je hodnota false, tabulka je deaktivována a nebude k dispozici v místě"
+" prodeje"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_floor___last_update
@@ -328,7 +341,7 @@ msgstr ""
 #: code:addons/pos_restaurant/static/src/xml/multiprint.xml:62
 #, python-format
 msgid "NEW"
-msgstr ""
+msgstr "NOVÝ"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -350,14 +363,14 @@ msgstr "Poznámka"
 #: code:addons/pos_restaurant/static/src/js/floors.js:495
 #, python-format
 msgid "Number of Seats ?"
-msgstr ""
+msgstr "Počet sedadel ?"
 
 #. module: pos_restaurant
 #. openerp-web
 #: code:addons/pos_restaurant/static/src/xml/printbill.xml:13
 #, python-format
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -389,14 +402,14 @@ msgstr ""
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.view_restaurant_printer_form
 msgid "POS Printer"
-msgstr ""
+msgstr "Pokladní tiskárna"
 
 #. module: pos_restaurant
 #. openerp-web
 #: code:addons/pos_restaurant/static/src/xml/splitbill.xml:78
 #, python-format
 msgid "Payment"
-msgstr ""
+msgstr "Platba"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_floor_pos_config_id
@@ -406,7 +419,7 @@ msgstr "Místo prodeje"
 #. module: pos_restaurant
 #: model:ir.model,name:pos_restaurant.model_pos_order
 msgid "Point of Sale Orders"
-msgstr ""
+msgstr "Objednávky prod. místa"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -428,12 +441,12 @@ msgstr ""
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_printer_name
 msgid "Printer Name"
-msgstr ""
+msgstr "Název tiskárny"
 
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.pos_config_view_form_inherit_restaurant
 msgid "Printers"
-msgstr ""
+msgstr "Tiskárny"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_printer_proxy_ip
@@ -450,7 +463,7 @@ msgstr ""
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.view_restaurant_floor_form
 msgid "Restaurant Floor"
-msgstr ""
+msgstr "Podlaží restaurace"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_pos_config_floor_ids
@@ -500,7 +513,7 @@ msgstr ""
 #: code:addons/pos_restaurant/static/src/xml/splitbill.xml:6
 #, python-format
 msgid "Split"
-msgstr ""
+msgstr "Rozdělit"
 
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.pos_config_view_form_inherit_restaurant
@@ -524,7 +537,7 @@ msgstr "Mezisoučet"
 #: code:addons/pos_restaurant/static/src/xml/printbill.xml:131
 #, python-format
 msgid "TOTAL"
-msgstr ""
+msgstr "CELKEM"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_pos_order_table_id
@@ -552,14 +565,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_floor_table_ids
 #: model:ir.ui.view,arch_db:pos_restaurant.view_restaurant_floor_form
 msgid "Tables"
-msgstr ""
+msgstr "Tabulky"
 
 #. module: pos_restaurant
 #. openerp-web
 #: code:addons/pos_restaurant/static/src/xml/printbill.xml:54
 #, python-format
 msgid "Tel:"
-msgstr ""
+msgstr "Tel:"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,help:pos_restaurant.field_restaurant_printer_proxy_ip
@@ -637,7 +650,7 @@ msgstr ""
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.pos_config_view_form_inherit_restaurant
 msgid "This product is used as reference on customer receipts."
-msgstr ""
+msgstr "Tento produkt se používá jako odkaz na stvrzenku zákazníka."
 
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.pos_config_view_form_inherit_restaurant
@@ -647,7 +660,7 @@ msgstr ""
 #. module: pos_restaurant
 #: model:ir.ui.view,arch_db:pos_restaurant.pos_config_view_form_inherit_restaurant
 msgid "Tips"
-msgstr ""
+msgstr "Spropitné"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -664,19 +677,19 @@ msgstr ""
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_table_position_v
 msgid "Vertical Position"
-msgstr ""
+msgstr "Vertikální poloha"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_table_width
 msgid "Width"
-msgstr ""
+msgstr "Šířka"
 
 #. module: pos_restaurant
 #. openerp-web
 #: code:addons/pos_restaurant/static/src/xml/splitbill.xml:44
 #, python-format
 msgid "With a"
-msgstr ""
+msgstr "S"
 
 #. module: pos_restaurant
 #. openerp-web
@@ -714,12 +727,12 @@ msgstr ""
 #: code:addons/pos_restaurant/static/src/xml/splitbill.xml:46
 #, python-format
 msgid "discount"
-msgstr ""
+msgstr "sleva"
 
 #. module: pos_restaurant
 #: model:ir.model,name:pos_restaurant.model_pos_config
 msgid "pos.config"
-msgstr ""
+msgstr "pos.config"
 
 #. module: pos_restaurant
 #: model:ir.model,name:pos_restaurant.model_restaurant_floor
